@@ -1,6 +1,6 @@
 fun main(args: Array<String>) {
     val x = 10
-    val y = 15
+    val y = 12
 
     if (x==y){
         println("X and Y are Equal")
