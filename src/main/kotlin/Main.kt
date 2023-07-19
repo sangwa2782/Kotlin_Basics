@@ -1,20 +1,16 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-// Kotlin Program to Check Alphabet using if else
+// Sum of Natural Numbers using for loop
 
+    val num = 100
+    var sum = 0
 
-    val a = '*'
-
-
-    if (a >= 'a' && a <= 'z' || a >= 'A' && a <= 'Z')
-    {
-        println("$a is an alphabet")
+    for (i in 1..num){
+        //sum = sum+i
+        sum += i
     }
 
-    else{
-        println("$a is not an alphabet")
-    }
-
+    println("Sum = $sum")
 
 }
