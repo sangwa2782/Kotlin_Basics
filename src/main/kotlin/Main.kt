@@ -1,28 +1,19 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-// Find Largest Among three numbers using if..else statement
+// Kotlin Program to Check Alphabet using if else
 
-    val reader = Scanner(System.`in`)
-    print("Enter First number: ")
-    val a = reader.nextInt()
 
-    print("Enter Second number: ")
-    val b = reader.nextInt()
+    val a = '*'
 
-    print("Enter Third number: ")
-    val c = reader.nextInt()
 
-    if (a >= b && a >= c)
+    if (a >= 'a' && a <= 'z' || a >= 'A' && a <= 'Z')
     {
-        println("$a is largest number")
+        println("$a is an alphabet")
     }
-    else if (b >= a && b >= c)
-    {
-        println("$b is largest number")
-    }
+
     else{
-        println("$c is largest number")
+        println("$a is not an alphabet")
     }
 
 
