@@ -1,13 +1,29 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-//Check whether an alphabet is vowel or consonant using if..else statement
+// Find Largest Among three numbers using if..else statement
 
+    val reader = Scanner(System.`in`)
+    print("Enter First number: ")
+    val a = reader.nextInt()
 
-    val ch = 'i'
+    print("Enter Second number: ")
+    val b = reader.nextInt()
 
-    val vowelConsonant = if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') "vowel" else "consonant"
+    print("Enter Third number: ")
+    val c = reader.nextInt()
 
-    println("$ch is $vowelConsonant")
+    if (a >= b && a >= c)
+    {
+        println("$a is largest number")
+    }
+    else if (b >= a && b >= c)
+    {
+        println("$b is largest number")
+    }
+    else{
+        println("$c is largest number")
+    }
+
 
 }
