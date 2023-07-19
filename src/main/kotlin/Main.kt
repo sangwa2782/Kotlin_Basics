@@ -1,16 +1,20 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-//  Generate Multiplication Table using for loop
+//  Kotlin Program to Display Fibonacci Series
 
-  var reader = Scanner(System.`in`)
-  print("Enter a Number: ")
+  val num = 10
+  var t1 = 0
+  var t2 = 1
 
-  var num = reader.nextInt()
+  for (i in 1..num){
+    print("$t1 + ")
 
- for (i in 1..10){
-   val product = num * i
-   println("$num * $i = $product")
- }
+    val sum = t1 + t2
+    t1 = t2
+    t2 = sum
+
+
+  }
 
 }
