@@ -1,16 +1,16 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-// Sum of Natural Numbers using for loop
+//  Find Factorial of a number using for loop
 
-    val num = 100
-    var sum = 0
+  val num = 10
+  var factorial: Long = 1
 
-    for (i in 1..num){
-        //sum = sum+i
-        sum += i
-    }
+  for (i in 1..num)
+  {
+    //factorial = factorial*i
+    factorial *=i.toLong()
+  }
 
-    println("Sum = $sum")
-
+    println("Factorial of $num is = $factorial")
 }
