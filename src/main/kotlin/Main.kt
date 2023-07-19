@@ -7,5 +7,4 @@ fun main(args: Array<String>) {
     var integer:Int = reader.nextInt()
 
     println("Your entered integer is: $integer")
-
 }
