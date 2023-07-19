@@ -1,17 +1,13 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-   //take input from user
-    var reader = Scanner(System.`in`)
-    print("Enter a Number: ")
+//Check whether an alphabet is vowel or consonant using if..else statement
 
-    var num:Int = reader.nextInt()
 
-    if (num % 2 == 0)
-    {
-        println("Your number is Even")
-    } else {
-        println("Your number is Odd")
-    }
+    val ch = 'i'
+
+    val vowelConsonant = if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') "vowel" else "consonant"
+
+    println("$ch is $vowelConsonant")
 
 }
