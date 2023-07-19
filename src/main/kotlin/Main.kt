@@ -1,16 +1,16 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-//  Find Factorial of a number using for loop
+//  Generate Multiplication Table using for loop
 
-  val num = 10
-  var factorial: Long = 1
+  var reader = Scanner(System.`in`)
+  print("Enter a Number: ")
 
-  for (i in 1..num)
-  {
-    //factorial = factorial*i
-    factorial *=i.toLong()
-  }
+  var num = reader.nextInt()
 
-    println("Factorial of $num is = $factorial")
+ for (i in 1..10){
+   val product = num * i
+   println("$num * $i = $product")
+ }
+
 }
