@@ -1,16 +1,17 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-    var a = 5
-    var b = 6
+   //take input from user
+    var reader = Scanner(System.`in`)
+    print("Enter a Number: ")
 
-    //swapping where b=5 & a=6
-    var c = a
+    var num:Int = reader.nextInt()
 
-    a = b
+    if (num % 2 == 0)
+    {
+        println("Your number is Even")
+    } else {
+        println("Your number is Odd")
+    }
 
-    b = c
-
-    println("a = $a")
-    println("b = $b")
 }
