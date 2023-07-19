@@ -1,10 +1,13 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-   val reader = Scanner(System.`in`)
-    print("Enter a Number: ")
+   val dividend = 25
+    val divisor = 4
 
-    var integer:Int = reader.nextInt()
+    var quotient = dividend / divisor
 
-    println("Your entered integer is: $integer")
+    var remainder = dividend % divisor
+
+    println("Quotient = $quotient")
+    println("Remainder = $remainder")
 }
