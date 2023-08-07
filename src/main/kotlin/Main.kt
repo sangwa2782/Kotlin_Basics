@@ -1,7 +1,7 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-//Kotlin Program to Count Number of Digits in an Integer
+//Find Factorial of a number using for loop
 
     var reader = Scanner(System.`in`)
     print("Enter the number: ")
@@ -11,14 +11,12 @@ fun main(args: Array<String>) {
     var num2  = num.toInt()
 //    var num = 2547856
 
-    var count = 0
+    var factorial = 1
 
-    while (num2 != 0)
-    {
-        num2 /= 10
-        ++count
-    }
+    for (i in 1..num2)
 
-    println("Number of digits: $count")
+        factorial *= i
+
+    println("Number of digits: $factorial")
 
 }
