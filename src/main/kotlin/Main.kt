@@ -1,26 +1,34 @@
+import java.lang.StringBuilder
 import java.util.Scanner
 
-//Program to find the frequency of character in a string in Kotlin
+//Program to count the number of words in a string in Kotlin
+
+
+fun countWords(inputString: String): Int {
+    val strArray = inputString.split(" ".toRegex()).toTypedArray()
+
+    var count = 0
+
+    for (s in strArray) {
+        if (s != "") {
+            count++
+        }
+    }
+    return count
+}
+
 fun main(args: Array<String>) {
 //Kotlin program to find total number of vowels, consonants, digits and spaces in a string
     val reader = Scanner(System.`in`)
     print("Enter a String: ")
-    val a = reader.nextLine()
-
-    val reader2 = Scanner(System.`in`)
-    print("Enter Charecter: ")
-    val b = reader2.next()[0]
-
-    var count = 0
-
-    for (i in a.indices) {
-        if (b == a[i])
-            count++
-    }
-    println("Frequency of $b is : $count")
+    val a:String = reader.nextLine()
 
 
 
-
-    
+    //Print words Count in a String
+    println("No. of Words in String : " + countWords(a))
 }
+
+
+
+
