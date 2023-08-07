@@ -1,44 +1,25 @@
 import java.util.Scanner
 
-//Program to find total number of vowels, consonants, digits and spaces in a string in Kotlin
+//Program to find the frequency of character in a string in Kotlin
 fun main(args: Array<String>) {
 //Kotlin program to find total number of vowels, consonants, digits and spaces in a string
     val reader = Scanner(System.`in`)
     print("Enter a String: ")
-
     val a = reader.nextLine()
 
-    var Vowel = 0
-    var Consonent = 0
-    var whitespace = 0
-    var digit = 0
-    var specialCharecters = 0
+    val reader2 = Scanner(System.`in`)
+    print("Enter Charecter: ")
+    val b = reader2.next()[0]
 
-    if (!a.isNullOrEmpty()) {
+    var count = 0
 
-        val s = a.lowercase()
-
-        for (i in s.indices) {
-
-            when(s[i]) {
-                'a','e','i','o','u' -> Vowel++
-                in 'a'..'z'-> Consonent++
-                in '0'..'9' -> digit++
-                ' ' -> whitespace++
-                else -> specialCharecters++
-
-            }
-
-        }
-        println("Vowels : $Vowel")
-        println("Consonants : $Consonent")
-        println("Digits : $digit")
-        println("white Spaces : $whitespace")
-        println("white specialCharecters : $specialCharecters")
-
-    } else {
-        println("You entered a empty value")
+    for (i in a.indices) {
+        if (b == a[i])
+            count++
     }
+    println("Frequency of $b is : $count")
+
+
 
 
     
