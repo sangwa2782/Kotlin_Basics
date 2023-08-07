@@ -1,17 +1,43 @@
 import java.util.Scanner
 
-//Check given number is letter digit or special charecter
+//Program to find total number of vowels, consonants, digits and spaces in a string in Kotlin
 fun main(args: Array<String>) {
-//Find Factorial of a number using for loop
+//Kotlin program to find total number of vowels, consonants, digits and spaces in a string
     val reader = Scanner(System.`in`)
-    print("Enter a character: ")
+    print("Enter a String: ")
 
-    val a = reader.next()[0]
+    val a = reader.nextLine()
 
-    when {
-        a.isLetter()-> println("Letter")
-        a.isDigit()-> println("Digit")
-        else-> println("Special Charecter")
+    var Vowel = 0
+    var Consonent = 0
+    var whitespace = 0
+    var digit = 0
+    var specialCharecters = 0
+
+    if (!a.isNullOrEmpty()) {
+
+        val s = a.lowercase()
+
+        for (i in s.indices) {
+
+            when(s[i]) {
+                'a','e','i','o','u' -> Vowel++
+                in 'a'..'z'-> Consonent++
+                in '0'..'9' -> digit++
+                ' ' -> whitespace++
+                else -> specialCharecters++
+
+            }
+
+        }
+        println("Vowels : $Vowel")
+        println("Consonants : $Consonent")
+        println("Digits : $digit")
+        println("white Spaces : $whitespace")
+        println("white specialCharecters : $specialCharecters")
+
+    } else {
+        println("You entered a empty value")
     }
 
 
