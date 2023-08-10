@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    val x = 11
+    val x = 12
 
     var result = if (x % 2 == 0) {
         "Even"
