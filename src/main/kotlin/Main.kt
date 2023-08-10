@@ -1,11 +1,7 @@
 fun main(args: Array<String>) {
     val x = 12
 
-    var result = if (x % 2 == 0) {
-        "Even"
-    } else {
-        "Odd"
-    }
+    var result = x in 1..15
 
     print(result)
 
