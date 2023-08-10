@@ -1,9 +1,17 @@
 fun main(args: Array<String>) {
-    val x = 14
+    val x = "Dog"
 
-    var result = x in 1..15
+    when (x) {
+        "Cat" -> println("This is Cat")
+        "Rat" -> println("This is Rat")
+        "Yak" -> println("This is Yak")
+        "Dog" -> println("This is dog")
+        else -> println("Animal Not Found")
 
-    print(result)
+
+    }
+
+
 
 
 
