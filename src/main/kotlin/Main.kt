@@ -1,35 +1,36 @@
 import kotlin.math.pow
 
 fun main(args: Array<String>) {
-    //kotlin Array manipulation
+    //kotlin Object oriented Programming
 
-    var arr = arrayOf("One","Two","Three")
-    var arr2 = arrayOf(1,2,3,4,5,6)
-    var arr3  = arrayOf<Int>(1,2,5,6,8)
+    val mustang = Car("Mustang", "Petrol", 100)
+    val beetal = Car("Beetal", "Diesel", 1200)
 
-    println("for simple array")
-    for (i in arr) {
-        println("$i")
+
+    println(mustang.name)
+    println(mustang.kmran)
+    println(mustang.type)
+    println("")
+
+    println(beetal.name)
+    println(beetal.type)
+    println("")
+
+    mustang.driveCar()
+    beetal.driveCar()
+
+
+
+
+}
+
+class Car (val name: String, val type : String, var kmran : Int) //properties
+{
+    fun driveCar(){
+        println("$name Car is driving")
     }
 
-    println("for array with index")
-    for ((i,e) in arr.withIndex()) {
-        println("$i - $e")
+    fun applyBreakes(){
+        println("Applied Breaks")
     }
-
-    println(" print with selected data")
-    println("${arr[2]}")
-    println("${arr.get(1)}")
-    arr.set(0,"Five")
-
-    println(arr[1])
-    println(arr.size)
-
-//    for (i in arr) {
-//        println("$i")
-//    }
-
-
-
-
 }
