@@ -1,7 +1,7 @@
 fun main(args: Array<String>) {
-//   for (i in 1..10) {
-//       println("$i")
-//   }
+   for (i in 1..10) {
+       println("$i")
+   }
 
      println("using step 2")
     for (i in 1..10 step 2){
@@ -18,6 +18,12 @@ fun main(args: Array<String>) {
     println("Reverse Counting")
     for (i in 10 downTo 2) {
         println("$i")
+    }
+
+    println("Create a Table")
+    val x = 5
+    for (i in 1..10){
+        println("$x * $i = ${x*i}")
     }
 
 
