@@ -1,15 +1,30 @@
 import kotlin.math.pow
 
 fun main(args: Array<String>) {
-  var result1 = Person("A", 17)
-    var result2 = Person("B", 20)
+// METHOD OVERRIDDING
 
-    println(result1.canVote())
-    println(result2.canVote())
+    val oneplus = OnePlus()
+    oneplus.display()
+    val generalMobile = Mobile()
+    generalMobile.display()
+
+
+
+
 }
 
-class Person(val name:String, var age:Int) {
-    fun canVote():Boolean {
-        return age>18
-    }
+open class Mobile() {
+    open val name: String = ""
+    open val size : Int = 5
+    fun makeCall() = println("Calling from Mobile")
+    fun  powerOff() = println("Shutting Down")
+    open fun display() = println("Simple Mobile Display")
+
+}
+
+class OnePlus : Mobile()
+{
+    override val name: String = "One Plus"
+    override val size:Int = 6
+    override fun display() = println("One Plus Display")
 }
