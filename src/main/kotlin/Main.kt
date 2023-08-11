@@ -1,30 +1,33 @@
 import kotlin.math.pow
 
 fun main(args: Array<String>) {
-// METHOD OVERRIDDING
+// METHOD polymorphism and inheritance
 
-    val oneplus = OnePlus()
-    oneplus.display()
-    val generalMobile = Mobile()
-    generalMobile.display()
+    val circle : Shape = Circle(4.0)
+    val square : Shape = Square(6.0)
 
-
-
-
+    val shapes = arrayOf(Circle(4.0), Square(4.0), Triangle(3.0, 4.0))
+    printArea(shapes)
 }
 
-open class Mobile() {
-    open val name: String = ""
-    open val size : Int = 5
-    fun makeCall() = println("Calling from Mobiles")
-    fun  powerOff() = println("Shutting Down")
-    open fun display() = println("Simple Mobile Display")
-
+fun printArea(shapes: Array<Shape>){
+    for (shape in shapes){
+        println(shape.area())
+    }
 }
 
-class OnePlus : Mobile()
-{
-    override val name: String = "One Plus"
-    override val size:Int = 6
-    override fun display() = println("One Plus Display")
+open class Shape{
+    open fun area() : Double = 0.0
+}
+
+class Circle(val radius:Double):Shape(){
+    override fun area(): Double = Math.PI * radius * radius
+}
+
+class  Square(val side:Double) : Shape() {
+    override fun area(): Double = side * side
+}
+
+class Triangle(val base:Double, val height:Double) : Shape() {
+    override fun area(): Double = 0.5 * base * height
 }
