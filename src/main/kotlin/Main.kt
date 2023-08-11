@@ -1,36 +1,15 @@
 import kotlin.math.pow
 
 fun main(args: Array<String>) {
-    //kotlin Object oriented Programming
+  var result1 = Person("A", 17)
+    var result2 = Person("B", 20)
 
-    val mustang = Car("Mustang", "Petrol", 100)
-    val beetal = Car("Beetal", "Diesel", 1200)
-
-
-    println(mustang.name)
-    println(mustang.kmran)
-    println(mustang.type)
-    println("")
-
-    println(beetal.name)
-    println(beetal.type)
-    println("")
-
-    mustang.driveCar()
-    beetal.driveCar()
-
-
-
-
+    println(result1.canVote())
+    println(result2.canVote())
 }
 
-class Car (val name: String, val type : String, var kmran : Int) //properties
-{
-    fun driveCar(){
-        println("$name Car is driving")
-    }
-
-    fun applyBreakes(){
-        println("Applied Breaks")
+class Person(val name:String, var age:Int) {
+    fun canVote():Boolean {
+        return age>18
     }
 }
