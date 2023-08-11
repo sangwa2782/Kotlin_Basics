@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 open class Mobile() {
     open val name: String = ""
     open val size : Int = 5
-    fun makeCall() = println("Calling from Mobile")
+    fun makeCall() = println("Calling from Mobiles")
     fun  powerOff() = println("Shutting Down")
     open fun display() = println("Simple Mobile Display")
 
