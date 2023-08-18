@@ -1,31 +1,21 @@
+import java.util.Objects
 import kotlin.math.pow
 
 
 
 
-// ABSTRACT
-// * A class can't be instantiated
-// * Abstract class can have both abstract and non abstract properties & method
-// * If a class has abstract method or property then class must be declared as abstract
+//1:- Write a program to reverse of array in kotlin
+
 
 fun main(args: Array<String>) {
-    val circle = Circles(4.0)
-    println(circle.area())
+    val array = arrayOf(1,2,3,4,5,6,7,8,9,10,11,15,47)
 
-    circle.display()
+    array.reverse()
+    println(array.contentToString())
 
 }
 
-abstract class Shape{
-    var name: String = ""
-    abstract  fun area() : Double
-    abstract  fun display()
-}
 
-class Circles(val radius:Double) : Shape(){
-    override fun area(): Double = Math.PI * radius * radius
-    override fun display() {
-       println("Circle is getting displayed")
-    }
-}
+
+
 
