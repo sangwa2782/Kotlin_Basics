@@ -4,14 +4,28 @@ import kotlin.math.pow
 
 
 
-//1:- Write a program to reverse of array in kotlin
+//1:- 2:- Write a program to remove duplicate element from array in kotlin
+
 
 
 fun main(args: Array<String>) {
-    val array = arrayOf(1,2,3,4,5,6,7,8,9,10,11,15,47)
+    val array = arrayOf(6,3,5,3,2,5,1,2,2,3,4,6,6,6,5,5,1,4,10,7)
 
-    array.reverse()
-    println(array.contentToString())
+// 1 using distinction()
+    var data = array.distinct()
+    println(data)
+
+//2 using toSet()
+//    var data = array.toSet()
+//    println(data)
+
+//3 toMutableSet()
+//    var data = array.toMutableSet()
+//    println(data)
+
+//4 toHashSet
+//    var data = array.toHashSet()
+//    println(data)
 
 }
 
