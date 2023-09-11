@@ -1,42 +1,43 @@
+import java.util.ArrayList
 import java.util.Objects
+import java.util.Scanner
 import kotlin.math.pow
 
 
 
 
-//1:- Write a program to sort element of array in kotlin
+//1:- Program to convert character array to string in Kotlin
 
 
 
 fun main(args: Array<String>) {
-    val array = arrayOf(6,3,5,3,2,5,1,2,2,3,4,6,6,6,5,5,1,4,10,7)
+    //Input Stream
+    val scanner = Scanner(System.`in`)
 
-    //------------- using function ---------------//
-    val data = removeDuplicates(array)
-    println(data.contentToString())
-    //------------------- view function ----------//
+    //Input char array size
+    print("Enter the Char Array Size: ")
+    val size = scanner.nextInt()
+
+    //create char array of given size
+    val charArray = CharArray(size)
+
+    //Input array element
+    println("Enter Char Arrays Element: ")
+    for (i in charArray.indices) {
+        print("charArray[$i] : ")
+        charArray[i] = scanner.next()[0]
+    }
+
+    //Print All Array Element
+    println("Array : ${charArray.concatToString()}")
+
+    //get string from char array
+    var strFromArray = String(charArray)
+
+    //print string from array
+    println("String converted from array : $strFromArray")
 
 
-// 1 using distinction()
-//    var data = array.distinct()
-//    println(data)
-
-//2 using toSet()
-//    var data = array.toSet()
-//    println(data)
-
-//3 toMutableSet()
-//    var data = array.toMutableSet()
-//    println(data)
-
-//4 toHashSet
-//    var data = array.toHashSet()
-//    println(data)
-
-}
-
-fun removeDuplicates(array: Array<Int>): IntArray {
-    return array.distinct().toIntArray()
 }
 
 
