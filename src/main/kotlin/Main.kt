@@ -6,25 +6,36 @@ import kotlin.math.pow
 
 
 
-//1:- Kotlin program to convert string to character array
+//1:- Program to find sum and average of array elements in Kotlin
 
 
 
 fun main(args: Array<String>) {
-    //Input Stream
-    val scanner = Scanner(System.`in`)
 
-    //Input string
-    print("Enter String: ")
-    val str = scanner.nextLine()
+    val s = Scanner(System.`in`)
+    print("Enter number of elements in the array: ")
 
-    //convert string to character array
-    var charArray = str.toCharArray()
+    val size = s.nextInt()
 
+    val doubleArray = DoubleArray(size)
 
+    println("Enter Arrays Element: ")
+    for (i in doubleArray.indices) {
+        print("doubleArray[$i] : ")
+        doubleArray[i] = s.nextDouble()
+    }
 
-    //print character array get from string
-    println("Character Array Element : ${charArray.contentToString()}")
+    var sum: Double = 0.toDouble()
+
+    for (i in doubleArray.indices) {
+        sum += doubleArray[i]
+    }
+
+    var avg = sum/doubleArray.size
+
+    println("Array : ${doubleArray.contentToString()}")
+    println("Sum of Element : $sum")
+    println("Average of Element : $avg")
 
 
 }
