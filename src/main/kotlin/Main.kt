@@ -6,37 +6,43 @@ import kotlin.math.pow
 
 
 
-//1:- Program to find sum and average of array elements in Kotlin
+//1:- Kotlin program to concatenate two integer arrays
 
 
 
 fun main(args: Array<String>) {
 
-    val s = Scanner(System.`in`)
-    print("Enter number of elements in the array: ")
+   val s = Scanner(System.`in`)
 
-    val size = s.nextInt()
+    println("Enter the length of Element in array1: ")
+    var size = s.nextInt()
 
-    val doubleArray = DoubleArray(size)
+    val intArray1 = IntArray(size)
 
-    println("Enter Arrays Element: ")
-    for (i in doubleArray.indices) {
-        print("doubleArray[$i] : ")
-        doubleArray[i] = s.nextDouble()
+    println("Enter Array Element: ")
+    for (i in intArray1.indices){
+        print("intArray1[$i] : ")
+        intArray1[i] = s.nextInt()
     }
 
-    var sum: Double = 0.toDouble()
+    print("Enter the length of Array in intArray2 : ")
+    size = s.nextInt()
 
-    for (i in doubleArray.indices) {
-        sum += doubleArray[i]
+    val intArray2 = IntArray(size)
+
+    println("Enter Array Elements: ")
+    for (i in intArray2.indices) {
+        print("intArray2[$i] : ")
+        intArray2[i] = s.nextInt()
     }
 
-    var avg = sum/doubleArray.size
+    println("Array1 : ${intArray1.contentToString()}")
+    println("Array2 : ${intArray2.contentToString()}")
 
-    println("Array : ${doubleArray.contentToString()}")
-    println("Sum of Element : $sum")
-    println("Average of Element : $avg")
+    var concatArray = intArray1+intArray2
 
+    println("Concat Element : ${concatArray.contentToString()}")
+    println("Concat Size : ${concatArray.size}")
 
 }
 
