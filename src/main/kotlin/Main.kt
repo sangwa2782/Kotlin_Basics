@@ -6,7 +6,7 @@ import kotlin.math.pow
 
 
 
-//1:- Program to convert character array to string in Kotlin
+//1:- Kotlin program to convert string to character array
 
 
 
@@ -14,28 +14,17 @@ fun main(args: Array<String>) {
     //Input Stream
     val scanner = Scanner(System.`in`)
 
-    //Input char array size
-    print("Enter the Char Array Size: ")
-    val size = scanner.nextInt()
+    //Input string
+    print("Enter String: ")
+    val str = scanner.nextLine()
 
-    //create char array of given size
-    val charArray = CharArray(size)
+    //convert string to character array
+    var charArray = str.toCharArray()
 
-    //Input array element
-    println("Enter Char Arrays Element: ")
-    for (i in charArray.indices) {
-        print("charArray[$i] : ")
-        charArray[i] = scanner.next()[0]
-    }
 
-    //Print All Array Element
-    println("Array : ${charArray.concatToString()}")
 
-    //get string from char array
-    var strFromArray = String(charArray)
-
-    //print string from array
-    println("String converted from array : $strFromArray")
+    //print character array get from string
+    println("Character Array Element : ${charArray.contentToString()}")
 
 
 }
