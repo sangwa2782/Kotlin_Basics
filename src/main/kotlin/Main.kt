@@ -6,43 +6,38 @@ import kotlin.math.pow
 
 
 
-//1:- Kotlin program to concatenate two integer arrays
+//1:- Kotlin program to Reverse, Ascending & Descending
 
 
 
 fun main(args: Array<String>) {
 
-   val s = Scanner(System.`in`)
+  val s = Scanner(System.`in`)
 
-    println("Enter the length of Element in array1: ")
-    var size = s.nextInt()
+    print("Enter Number of words in String Array : ")
+    val size = s.nextInt()
 
-    val intArray1 = IntArray(size)
+    val strArray  = Array<String>(size){""}
 
-    println("Enter Array Element: ")
-    for (i in intArray1.indices){
-        print("intArray1[$i] : ")
-        intArray1[i] = s.nextInt()
+   print("Enter Words of Array : ")
+    for (i in strArray.indices) {
+        print("Arry Word[$i] : ")
+        strArray[i] = readln().toString()
     }
 
-    print("Enter the length of Array in intArray2 : ")
-    size = s.nextInt()
+    println("String Array Elements : ${strArray.contentToString()}")
 
-    val intArray2 = IntArray(size)
+    //for reverse
+    var reverseArray = strArray.reversedArray()
+    println("Reversed Array list = ${reverseArray.contentToString()}")
 
-    println("Enter Array Elements: ")
-    for (i in intArray2.indices) {
-        print("intArray2[$i] : ")
-        intArray2[i] = s.nextInt()
-    }
+    //Ascending order
+    var strAscending = strArray.sortedArray()
+    println("Array in Ascending Order : ${strAscending.contentToString()}")
 
-    println("Array1 : ${intArray1.contentToString()}")
-    println("Array2 : ${intArray2.contentToString()}")
-
-    var concatArray = intArray1+intArray2
-
-    println("Concat Element : ${concatArray.contentToString()}")
-    println("Concat Size : ${concatArray.size}")
+    //Descending order
+    var strDescending = strArray.sortedArrayDescending()
+    println("Array in Descending order : ${strDescending.contentToString()}")
 
 }
 
