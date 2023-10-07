@@ -1,47 +1,37 @@
-import java.util.ArrayList
-import java.util.Objects
-import java.util.Scanner
-import kotlin.math.pow
+import java.util.*
+import kotlin.math.hypot
 
+//Program to calculate and display student grades in Kotlin
 
+fun main() {
+    var read = Scanner(System.`in`)
 
+    val subjectName = arrayOf<String>("Hindi","English","Physics","Chemistry","Math")
 
-//1:- Kotlin program to Reverse, Ascending & Descending
+    val marksArray = DoubleArray(5)
 
-
-
-fun main(args: Array<String>) {
-
-  val s = Scanner(System.`in`)
-
-    print("Enter Number of words in String Array : ")
-    val size = s.nextInt()
-
-    val strArray  = Array<String>(size){""}
-
-   print("Enter Words of Array : ")
-    for (i in strArray.indices) {
-        print("Arry Word[$i] : ")
-        strArray[i] = readln().toString()
+    println("Enter marks: ")
+    for (i in marksArray.indices) {
+        print("${subjectName[i]} : ")
+        marksArray[i] = read.nextDouble()
     }
 
-    println("String Array Elements : ${strArray.contentToString()}")
+    val total = marksArray.sum()
+    var percentage = marksArray.average()
 
-    //for reverse
-    var reverseArray = strArray.reversedArray()
-    println("Reversed Array list = ${reverseArray.contentToString()}")
+    println("Total marks : $total")
+    println("Percentage : $percentage")
 
-    //Ascending order
-    var strAscending = strArray.sortedArray()
-    println("Array in Ascending Order : ${strAscending.contentToString()}")
+    when {
+        percentage > 80 -> println("A Grade")
+        percentage > 60 -> println("B Grade")
+        percentage > 40 -> println("C Grade")
+    }
 
-    //Descending order
-    var strDescending = strArray.sortedArrayDescending()
-    println("Array in Descending order : ${strDescending.contentToString()}")
+
+
 
 }
-
-
 
 
 
