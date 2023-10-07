@@ -2,31 +2,37 @@ import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.math.hypot
 
-//Program to input a string in Kotlin
+//Simple calculation on two integer numbers in Kotlin
 
 fun main() {
-//    var read = Scanner(System.`in`)
+    var read = Scanner(System.`in`)
 
-    println("Enter your name: ")
-    val name = readln()
+    print("Enter First number: ")
+    var first = read.nextInt()
 
-    println("Enter your name: ")
-    val address = readln()
+    print("Enter Second number: ")
+    var second = read.nextInt()
 
-    println("Enter your name: ")
-    val country = readln()
+    print("Enter any action('+','-','*','/'): ")
+    var choice = read.next()[0]
 
-    println("Your name is : $name")
-    println("Your Address is : $address")
-    println("Your country name is : $country")
+    when(choice) {
+        '+' -> println("Sum of $first and $second is ${first+second}")
+        '-' -> println("Subtraction of $first and $second is ${first-second}")
+        '*' -> println("Multiplication of $first and $second is ${first*second}")
+        '/' -> println("Division of $first and $second is ${first/second}")
+        else -> println("not a valid operator")
+    }
+
+
 
 }
 
 
-fun largestNum(a:Int, b:Int, c:Int):Int {
-       return when {
-            a>b && a>c -> a
-            b>c -> b
-            else -> c
-        }
-}
+//fun factorial(first:Int):Long {
+//    var fact: Long =1
+//    for (i in 1..first) {
+//         fact *= i.toLong()
+//        return fact
+//    }
+//}
